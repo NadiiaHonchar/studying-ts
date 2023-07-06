@@ -116,3 +116,82 @@ const person2: Person ={
         console.log(this.name);
     }
 }
+
+//практика
+
+let age: number;
+age = 50;
+
+let name10: string;
+name10 = 'Max';
+
+let toggle2: boolean;
+toggle2 = true;
+
+let empty2: null;
+empty2 = null;
+let notInitialize: undefined;
+notInitialize = undefined;
+
+let callback2 = (a: number) : number => { return 100 + a };
+
+let anything: any;
+anything = -20;
+anything = 'Text';
+anything = {};
+
+let some7:unknown;
+some7 = 'Text';
+if (typeof some7 ==='string'){
+    str = some7;
+}
+
+let person: [string, number]
+person = ['Max', 21];
+
+enum IsLoad {LOADING, READY}
+
+let var7: string | number;
+let activ7: 'enable'| 'disable';
+
+function showMessage(message:string) :void {
+    console.log(message);
+  }
+  
+  
+  function calc(num1:number, num2:number): number {
+    return num1 + num2;
+  }
+  
+  function customError():never {
+    throw new Error('Error');
+  }
+
+type Page= {
+    title: string;
+    likes: number;
+    accounts: string [];
+    status: 'open' | 'close';
+    details?:{
+        createAt: Date;
+        updateAt: Date;
+    }
+}
+
+  const page1: Page = {
+    title: 'The awesome page',
+    likes: 100,
+    accounts: ['Max', 'Anton', 'Nikita'],
+    status: 'open',
+    details: {
+      createAt: new Date('2021-01-01'),
+      updateAt: new Date('2021-05-01'),
+    }
+  }
+  
+  const page2 = {
+    title: 'Python or Js',
+    likes: 5,
+    accounts: ['Alex'],
+    status: 'close',
+  }
