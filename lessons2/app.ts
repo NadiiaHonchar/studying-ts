@@ -21,7 +21,7 @@ arrObject = [{name: 'My'}, {name: 'NowMy'}]
 
 let db:{
     id:number;
-    title?: string;
+    title?: string; // не обов'язковий параметр
     info:{
         data: Date;
         isNew:boolean;
@@ -73,3 +73,46 @@ function combine(param1: number | string, param2: number | string) {
 
   let newactive: 'start' | 'end';
   newactive= 'start';
+
+
+function print():void{
+    console.log('Hello');
+}
+
+function combine2 (num5: number, num6: number): number{
+    return num5 + num6;
+}
+
+function customErr():never{
+    throw new Error('Some error');
+}
+
+let foo: Function;
+foo = ()=>{};
+
+let foo2: (param1: number, param2: string)=> void;
+foo2 = (param1: number, param2: string)=>{
+    console.log("Hello");
+}
+
+type Person = {
+    readonly name: string; //не можна змінювати
+    age: number;
+    showName:()=>void;
+}
+
+const person1: Person ={
+    name:'name1',
+    age: 5,
+    showName(){
+        console.log(this.name);
+    }
+}
+
+const person2: Person ={
+    name:'name2',
+    age: 10,
+    showName(){
+        console.log(this.name);
+    }
+}
