@@ -49,8 +49,9 @@ if(typeof unk === 'string'){
 
 let fixed: [string, number];
 fixed=['df', 5];
-fixed.push['new'];
+// fixed.push['new'];
 
+//var or let
 enum Toggle {ENABLE, DISABLE};
 const service = {
     status: Toggle.ENABLE,
@@ -92,7 +93,7 @@ foo = ()=>{};
 
 let foo2: (param1: number, param2: string)=> void;
 foo2 = (param1: number, param2: string)=>{
-    console.log("Hello");
+    console.log("Hello", param1, "hello", param2);
 }
 
 type Person = {
